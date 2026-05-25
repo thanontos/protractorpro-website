@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Protractor Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #0F1623;
+      --navy2:  #151C2C;
+      --navy3:  #1A2035;
+      --card:   #1E2640;
+      --border: #2A3452;
+      --blue:   #4A90D9;
+      --text:   #E8EAF0;
+      --muted:  #8A92A8;
+    }
+    body { font-family: "Inter", sans-serif; background: var(--navy); color: var(--text); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,22,35,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--blue); }
+    nav a.back { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    nav a.back:hover { color: var(--text); }
+
+    .wrapper {
+      max-width: 780px; margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 3rem; }
+
+    h2 {
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--blue);
+      margin: 2.5rem 0 0.75rem;
+    }
+    p { color: #C4CAD8; margin-bottom: 1rem; }
+    ul { color: #C4CAD8; padding-left: 1.5rem; margin-bottom: 1rem; }
+    ul li { margin-bottom: 0.4rem; }
+
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem; text-align: center;
+      color: var(--muted); font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">Protractor<span>Pro</span></a>
+  <a class="back" href="/">← Back to Home</a>
+</nav>
+
+<div class="wrapper">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: May 25, 2026 &nbsp;·&nbsp; Protractor Pro</p>
+
+  <div class="card">
+    <p>Protractor Pro is a professional roofing estimating application for Windows. This policy explains what data we collect, how we use it, and how it is protected. We do not sell or share your data with third parties for advertising or marketing purposes.</p>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>Protractor Pro is operated by Protractor Pro LLC. If you have questions about this policy, contact us at <a href="mailto:support@protractorpro.com">support@protractorpro.com</a>.</p>
+
+  <h2>2. What Data We Collect</h2>
+
+  <p><strong>Account information</strong></p>
+  <ul>
+    <li>Your name and email address, collected when you register or log in.</li>
+    <li>Used to authenticate your account and manage your subscription.</li>
+  </ul>
+
+  <p><strong>Business and estimating data</strong></p>
+  <ul>
+    <li>Customer names, addresses, and contact details that you enter into the app.</li>
+    <li>Estimates, bids, measurements, line items, and material costs you create.</li>
+    <li>Plan images and PDF blueprints you upload for digitizing.</li>
+  </ul>
+  <p>This data belongs to you. We store it securely so you can access it across devices. We do not read, analyze, or share it.</p>
+
+  <p><strong>Machine fingerprint (trial accounts only)</strong></p>
+  <ul>
+    <li>To prevent trial abuse, we generate a one-way SHA-256 hash of hardware identifiers (Windows MachineGuid, motherboard serial, CPU ID).</li>
+    <li>The raw identifiers are never transmitted or stored — only the hash. This hash cannot be reversed to identify your machine by a third party.</li>
+  </ul>
+
+  <p><strong>Crash reports (opt-in only)</strong></p>
+  <ul>
+    <li>If the app encounters an error, you may see a "Send Report" button in the error dialog.</li>
+    <li>Clicking it sends a crash report to Sentry (sentry.io) including a stack trace and your account email.</li>
+    <li>Nothing is sent automatically — reports are only transmitted when you explicitly click "Send Report".</li>
+  </ul>
+
+  <h2>3. What We Do Not Collect</h2>
+  <ul>
+    <li>Payment or billing information (handled entirely by our payment processor).</li>
+    <li>Browsing history or activity outside the app.</li>
+    <li>Location data.</li>
+    <li>Any automatic usage telemetry or analytics.</li>
+  </ul>
+
+  <h2>4. How Your Data Is Stored</h2>
+  <ul>
+    <li><strong>Account and estimate data</strong> — stored in a PostgreSQL database hosted on Railway (railway.app), secured with TLS in transit and at rest.</li>
+    <li><strong>Plan images</strong> — stored in Supabase Storage (supabase.com), a managed cloud storage service, with access restricted to your account.</li>
+    <li><strong>Crash reports</strong> — sent to Sentry (sentry.io) only when you opt in via the "Send Report" button.</li>
+  </ul>
+
+  <h2>5. Data Retention</h2>
+  <p>Your data is retained for as long as your account is active. If you cancel your subscription and request deletion, we will permanently delete your account data within 30 days. To request deletion, email <a href="mailto:support@protractorpro.com">support@protractorpro.com</a>.</p>
+
+  <h2>6. Third-Party Services</h2>
+  <p>Protractor Pro uses the following third-party services to operate:</p>
+  <ul>
+    <li><strong>Railway</strong> (railway.app) — API and database hosting.</li>
+    <li><strong>Supabase</strong> (supabase.com) — plan image storage.</li>
+    <li><strong>Sentry</strong> (sentry.io) — opt-in crash reporting.</li>
+  </ul>
+  <p>We do not use advertising networks, social media trackers, or any analytics platforms.</p>
+
+  <h2>7. Security</h2>
+  <p>All data transmitted between the app and our servers is encrypted using TLS. Database access is restricted to the application and authorized administrators. We do not store passwords in plain text.</p>
+
+  <h2>8. Your Rights</h2>
+  <p>You may request a copy of your data, correction of inaccurate data, or deletion of your account at any time by contacting us at <a href="mailto:support@protractorpro.com">support@protractorpro.com</a>. We will respond within 30 days.</p>
+
+  <h2>9. Children's Privacy</h2>
+  <p>Protractor Pro is a professional business application not intended for use by anyone under the age of 18. We do not knowingly collect data from minors.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>If we make material changes to this policy, we will update the effective date above and notify active users by email. Continued use of the app after changes take effect constitutes acceptance of the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or requests: <a href="mailto:support@protractorpro.com">support@protractorpro.com</a></p>
+</div>
+
+<footer>
+  &copy; 2026 Protractor Pro &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
