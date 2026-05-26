@@ -479,9 +479,13 @@
     <div class="section-tag">Launching Soon</div>
     <div class="section-title">ProtractorPro is almost here</div>
     <div class="section-sub">We&rsquo;re putting the finishing touches on the app. Drop your email below and we&rsquo;ll notify you the moment it&rsquo;s ready.</div>
-    <form onsubmit="handleSignup(event)" style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+    <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+      onsubmit="handleSignup(event)"
+      style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+      <input type="hidden" name="form-name" value="notify" />
+      <input type="hidden" name="bot-field" />
       <input
-        type="email" id="email-input" placeholder="your@email.com" required
+        type="email" name="email" id="email-input" placeholder="your@email.com" required
         style="padding:0.85rem 1.25rem;border-radius:10px;border:1px solid var(--border);
                background:var(--card);color:var(--text);font-size:1rem;
                min-width:260px;outline:none;font-family:inherit;"
@@ -503,11 +507,21 @@
 <script>
 function handleSignup(e) {
   e.preventDefault();
-  var email = document.getElementById("email-input").value;
-  document.getElementById("email-input").parentElement.style.display = "none";
-  document.getElementById("signup-msg").style.display = "block";
-  // TODO: wire up to your email service (Mailchimp, ConvertKit, etc.)
-  console.log("Signup:", email);
+  var form = e.target;
+  var data = new FormData(form);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(data).toString()
+  })
+  .then(function() {
+    form.style.display = "none";
+    document.getElementById("signup-msg").style.display = "block";
+  })
+  .catch(function() {
+    form.style.display = "none";
+    document.getElementById("signup-msg").style.display = "block";
+  });
 }
 </script>
 
