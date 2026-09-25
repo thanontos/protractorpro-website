@@ -265,7 +265,7 @@
     }
     .footer-logo img { height: 40px; opacity: 0.85; }
     .footer-tagline { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
-    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; }
     .footer-links a { font-size: 0.82rem; color: var(--muted); text-decoration: none; }
     .footer-links a:hover { color: var(--text); }
     .footer-copy { font-size: 0.78rem; color: var(--muted); }
@@ -276,6 +276,10 @@
       .steps::before { display: none; }
       .nav-links { display: none; }
       .mock-panel { display: none; }
+      /* Grid items default to min-width:auto, so the app mock-up forced the
+         hero column (and the whole page) wider than a phone screen. */
+      .hero-grid > * { min-width: 0; }
+      .mockup { max-width: 100%; overflow: hidden; }
     }
   </style>
 </head>
@@ -287,9 +291,12 @@
   </div>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
+    <li><a href="#systems">Roof Systems</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#trades">Trades</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#download">Download</a></li>
+    <li><a href="https://portal.protractorpro.com">Customer Login</a></li>
   </ul>
   <a href="/download" class="nav-cta">Try It Now</a>
 </nav>
@@ -304,7 +311,7 @@
       <div class="hero-logo-display"><img src="data:image/png;base64,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" alt="ProtractorPro" /></div>
       <div class="hero-badge"><span></span> Now in Early Access</div>
       <h1>Estimate Faster.<br/><em>Win More Jobs.</em></h1>
-      <p>ProtractorPro puts a professional plan digitizer and estimating engine on your desktop. Upload your plans, measure exactly, and build a complete bid — takeoff, materials, labor, and markup — in minutes, not hours.</p>
+      <p>ProtractorPro is roofing estimating software for your desktop. Load your plans, trace the roof, and it works out the materials, labor, and wind-zone fastening for shingle, tile, standing seam, single-ply, and tapered insulation &mdash; then checks the bid before it goes out.</p>
       <div class="hero-actions">
         <a href="/download" class="btn-primary">&#11015; Try It Now &mdash; Free</a>
         <a href="#features" class="btn-secondary">See Features</a>
@@ -477,48 +484,132 @@
     <div class="features-header">
       <div class="section-tag">Features</div>
       <div class="section-title">Everything you need to bid with confidence</div>
-      <div class="section-sub">ProtractorPro is built around the way contractors actually work &mdash; from plans to pricebook to signed contract.</div>
+      <div class="section-sub">Built around the way roofing estimators actually work &mdash; from the plan set to a bid you trust.</div>
     </div>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">&#128208;</div>
         <h3>Plan Digitizer</h3>
-        <p>Load multi-page PDF plans and draw directly on-screen with polygon, rectangle, linear, and count tools. Corner snapping and a per-bid plan library keep every page organized.</p>
+        <p>Load multi-page PDF plans and trace with area, linear, count, and corner tools. Snap to corners and edge midpoints, set scale and pitch per page, duplicate a page&rsquo;s setup, and copy drawings from one page to another.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">&#127991;</div>
-        <h3>Smart Conditions</h3>
-        <p>Define named areas like "Main Field," "Ridge Cap," or "Valley." Each condition carries its own material layers and fasteners, picks the right drawing tool, and totals quantities as you draw.</p>
+        <div class="feature-icon">&#128194;</div>
+        <h3>Scopes &amp; Alternates</h3>
+        <p>Split a job into scopes &mdash; roofing, gutters, solar &mdash; and price alternates side by side, like TPO vs. PVC. Materials, labor, and the recap switch between the whole job and any single alternate.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">&#127968;</div>
-        <h3>Roofing Systems Built In</h3>
-        <p>Pre-built condition groups for major shingle brands, concrete and clay tile, and standing seam metal. Import a system and your library pricing applies automatically.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#127788;&#65039;</div>
-        <h3>Wind Zone Fastening</h3>
-        <p>Perimeter and corner zones per ASCE 7-16 / 7-22, with per-zone fastening patterns and clip counts &mdash; so enhanced-fastening costs land in the bid, not in a guess.</p>
+        <div class="feature-icon">&#128279;</div>
+        <h3>Conditions That Link</h3>
+        <p>Each condition carries its own material layers, fasteners, and waste per material. Link one quantity to another and it follows the drawing live &mdash; and corner counts come straight from the shape you drew.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#128119;</div>
-        <h3>Labor &amp; Crew Planning</h3>
-        <p>Production rates or hourly pay, a guided labor wizard, and instant hours and crew-day totals for every condition on the job.</p>
+        <h3>Labor Your Way</h3>
+        <p>Pay by the square or by the hour &mdash; both are built in. Set crew size and hours per day for each cost code and get labor hours and crew days for the whole job.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#128176;</div>
         <h3>Job Recap &amp; Markup</h3>
-        <p>A contractor-style recap with inline markup for overhead, profit, and tax. See real cost vs. sell price and live margin ratios before you send the bid.</p>
+        <p>A contractor-style recap by cost code &mdash; material, labor, equipment, and other &mdash; with overhead, profit, tax, bond, and the warranty as a priced line. See cost vs. sell and your margin before you send.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9888;&#65039;</div>
+        <h3>Bid Checks</h3>
+        <p>Before a bid goes out, ProtractorPro flags what would cost you: items priced at $0.00, items with no cost code, custom formulas that skip coverage or waste, and metal roof planes left outside the wind zones.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128230;</div>
+        <h3>Supplier-Ready Orders</h3>
+        <p>Materials roll up by product across every page and are rounded once the job is combined &mdash; not item by item &mdash; so you order what the job needs. Export to Excel with a total sheet and a tab per page, plus panel cut lists for the metal shop.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#9729;&#65039;</div>
-        <h3>Cloud-Synced Bids</h3>
-        <p>Bids, plans, and takeoffs are stored securely in the cloud. Open your work from any machine and pick up exactly where you left off.</p>
+        <h3>Cloud Bids, Team-Safe</h3>
+        <p>Bids, plans, and takeoffs sync to the cloud so you can work from any machine. Check a bid out to edit it while your team opens it read-only; autosave protects your work, and a crashed session never locks a bid for good.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#128274;</div>
-        <h3>Team Locking &amp; Autosave</h3>
-        <p>Real-time lock indicators prevent overwrite conflicts, stale locks release automatically, and autosave protects your work as you go.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .systems { background: var(--navy2); border-top: 1px solid var(--border); }
+  .systems-header { text-align: center; margin-bottom: 3.5rem; }
+  .systems-header .section-sub { margin: 0 auto; }
+  .systems-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .system-card {
+    background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--blue);
+    border-radius: 16px; padding: 1.75rem 1.75rem 1.5rem;
+  }
+  .system-card.wide { grid-column: 1 / -1; border-top-color: var(--green); }
+  .sys-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+                color: var(--blue-lt); margin-bottom: 0.35rem; }
+  .system-card.wide .sys-kicker { color: var(--green); }
+  .system-card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.9rem; }
+  .system-card ul { list-style: none; padding: 0; margin: 0; }
+  .system-card li { font-size: 0.88rem; color: var(--muted); line-height: 1.6;
+                    padding: 0.3rem 0 0.3rem 1.4rem; position: relative; }
+  .system-card li::before { content: "\2713"; color: var(--green); position: absolute; left: 0; font-weight: 700; }
+  .system-card.wide ul { columns: 2; column-gap: 2.5rem; }
+  .system-card.wide li { break-inside: avoid; }
+  @media (max-width: 760px) { .systems-grid { grid-template-columns: 1fr; } .system-card.wide ul { columns: 1; } }
+</style>
+<section class="systems" id="systems">
+  <div class="section-inner">
+    <div class="systems-header">
+      <div class="section-tag">Roofing Systems</div>
+      <div class="section-title">Built for how roofs are actually bid</div>
+      <div class="section-sub">Not a generic takeoff tool with roofing bolted on. Each system does the math your estimators do by hand today.</div>
+    </div>
+    <div class="systems-grid">
+      <div class="system-card">
+        <div class="sys-kicker">Metal</div>
+        <h3>Standing Seam</h3>
+        <ul>
+          <li>Set a slope direction on each plane and get a labeled panel cut list, rounded to your cut increment</li>
+          <li>A seam factor per panel profile turns roof area into the coil you actually order</li>
+          <li>Clips counted seam by seam, tighter in the wind-zone perimeter and corners</li>
+          <li>Export the cut list to Excel for the shop</li>
+        </ul>
+      </div>
+      <div class="system-card">
+        <div class="sys-kicker">Low Slope</div>
+        <h3>Single-Ply Membrane</h3>
+        <ul>
+          <li>Roll counts from each roll&rsquo;s net coverage after laps, not its label size</li>
+          <li>Perimeter half-sheets sized from the perimeter length you draw</li>
+          <li>Priced on the roll you buy, ordered on what it covers</li>
+        </ul>
+      </div>
+      <div class="system-card">
+        <div class="sys-kicker">Low Slope</div>
+        <h3>Tapered Insulation</h3>
+        <ul>
+          <li>Draw crickets from shape templates right on the plan</li>
+          <li>Design to an R-value &mdash; minimum at the drain or average &mdash; and the thickness is solved for you</li>
+          <li>Board schedule with base, filler, and cover sizes</li>
+          <li>Switch between mechanically attached and adhered; fasteners swap for adhesive automatically</li>
+        </ul>
+      </div>
+      <div class="system-card">
+        <div class="sys-kicker">Steep Slope</div>
+        <h3>Shingle &amp; Tile</h3>
+        <ul>
+          <li>Pre-built systems for major shingle brands and concrete and clay tile</li>
+          <li>Hips, ridges, valleys, and flashings as linear conditions, with sticks and bundles that round the right way</li>
+          <li>Import a system and your library pricing applies</li>
+        </ul>
+      </div>
+      <div class="system-card wide">
+        <div class="sys-kicker">ASCE 7-16 &amp; 7-22</div>
+        <h3>Wind Zones, Counted Into the Bid</h3>
+        <ul>
+          <li>Low-slope perimeter and L-shaped corner zones sized from the building height</li>
+          <li>Steep-slope hip and gable layouts from the hips and ridges you draw</li>
+          <li>Outline each roof level with its own height &mdash; zones are drawn right on the plan</li>
+          <li>Enhanced fastening and clip counts go into the price, not a guess</li>
+          <li>Mark interior walls and skip corners that don&rsquo;t apply</li>
+          <li>Any metal plane left outside the zones is flagged before the bid goes out</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -544,7 +635,7 @@
       <div class="step">
         <div class="step-num">3</div>
         <h3>Generate Your Estimate</h3>
-        <p>Materials and labor auto-populate from your conditions. Apply markup in the job recap and send a bid you know is profitable.</p>
+        <p>Materials, labor, and wind-zone fastening fill in from your conditions. Clear any flags, apply markup in the job recap, and send a bid you know is right.</p>
       </div>
     </div>
   </div>
@@ -598,6 +689,75 @@
     </div>
     <p style="margin-top:2rem;font-size:0.85rem;color:var(--muted);">
       Want your trade supported sooner? <a href="mailto:hello@protractorpro.com" style="color:var(--blue);text-decoration:none;">Let us know &#8594;</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .pricing { padding: 5.5rem 1.5rem; background: var(--navy); }
+  .pricing .section-inner { max-width: 1060px; margin: 0 auto; text-align: center; }
+  .price-grid { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+  .price-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+                padding: 2rem 1.8rem; width: 320px; text-align: left; position: relative; }
+  .price-card.best { border-color: var(--green); }
+  .price-badge { position: absolute; top: -12px; right: 18px; background: var(--green); color: #07210f;
+                 font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; letter-spacing: .5px; }
+  .price-plan { font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+  .price-amount { font-size: 2.4rem; font-weight: 800; color: var(--text); margin: .6rem 0 0; }
+  .price-amount span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+  .price-note { font-size: 0.85rem; color: var(--green); margin: .2rem 0 1.1rem; min-height: 1.1rem; }
+  .price-card ul { list-style: none; padding: 0; margin: 0 0 1.6rem; }
+  .price-card li { font-size: 0.88rem; color: var(--text); padding: .32rem 0 .32rem 1.4rem; position: relative; }
+  .price-card li::before { content: "\2713"; color: var(--green); position: absolute; left: 0; }
+  .price-cta { display: block; text-align: center; background: var(--blue); color: #fff; text-decoration: none;
+               font-weight: 600; padding: .8rem; border-radius: 8px; }
+  .price-cta:hover { background: var(--blue-lt); }
+  .price-fine { margin-top: 2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.7; max-width: 640px;
+                margin-left: auto; margin-right: auto; }
+  .price-fine a { color: var(--blue); text-decoration: none; }
+</style>
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <div class="section-tag">Pricing</div>
+    <div class="section-title">Simple per-seat pricing. No surprises.</div>
+    <div class="section-sub">Every plan includes the full app &mdash; every feature, every roofing system,
+      unlimited bids. A seat is one person in the app at a time, so a whole team can share them.
+      Start with a free 30-day trial; no credit card required.</div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-plan">Monthly</div>
+        <div class="price-amount">$74.99 <span>/ seat / month</span></div>
+        <div class="price-note"></div>
+        <ul>
+          <li>Full estimating &amp; digitizer suite</li>
+          <li>All roofing systems &amp; material library</li>
+          <li>Cloud-synced bids on any machine</li>
+          <li>Add or remove seats anytime</li>
+          <li>Cancel anytime &mdash; no long-term contract</li>
+        </ul>
+        <a class="price-cta" href="/download">Start Free 30-Day Trial</a>
+      </div>
+      <div class="price-card best">
+        <div class="price-badge">2 MONTHS FREE</div>
+        <div class="price-plan">Annual</div>
+        <div class="price-amount">$749.90 <span>/ seat / year</span></div>
+        <div class="price-note">Like $62.49/mo &mdash; pay once a year</div>
+        <ul>
+          <li>Everything in Monthly</li>
+          <li>Two months free vs. paying monthly</li>
+          <li>One invoice a year for your books</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="price-cta" href="/download">Start Free 30-Day Trial</a>
+      </div>
+    </div>
+    <p class="price-fine">
+      Subscribe and manage everything yourself at the
+      <a href="https://portal.protractorpro.com">customer portal</a> &mdash; seats, billing contact,
+      invoices, and cancellation. Prefer invoice billing through your accounting department?
+      <a href="mailto:hello@protractorpro.com">Email us</a> and we&rsquo;ll set it up.
+      Prices in USD per seat. Cancelling stops future renewals at the end of the paid period;
+      fees already paid are non-refundable and not prorated. Prices subject to change with 30 days&rsquo; notice.
     </p>
   </div>
 </section>
@@ -665,7 +825,9 @@ function handleSignup(e) {
     <div class="footer-links">
       <a href="#features">Features</a>
       <a href="#trades">Trades</a>
+      <a href="#pricing">Pricing</a>
       <a href="#download">Download</a>
+      <a href="https://portal.protractorpro.com">Customer Login</a>
       <a href="mailto:hello@protractorpro.com">Contact</a>
       <a href="/privacy.html">Privacy Policy</a>
     </div>
