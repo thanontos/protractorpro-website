@@ -204,6 +204,7 @@
     }
     .feature-card h3 { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
     .feature-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+    .soon-tag { display:inline-block; margin-left:0.35rem; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.62rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; vertical-align:middle; background:rgba(243,156,18,0.12); border:1px solid rgba(243,156,18,0.45); color:var(--orange); }
 
     /* HOW IT WORKS */
     .how { background: var(--navy); }
@@ -241,6 +242,8 @@
     .chip-badge { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; padding: 0.15rem 0.45rem; border-radius: 4px; }
     .trade-chip.live .chip-badge { background: var(--green); color: #fff; }
     .trade-chip.soon .chip-badge { background: rgba(243,156,18,0.15); color: var(--orange); border: 1px solid rgba(243,156,18,0.3); }
+    .trade-chip.next { background: rgba(243,156,18,0.08); border: 1px solid rgba(243,156,18,0.45); color: var(--orange); }
+    .trade-chip.next .chip-badge { background: var(--orange); color: #fff; }
 
     /* DOWNLOAD CTA */
     .download-cta {
@@ -309,7 +312,7 @@
   <div class="hero-grid" style="max-width:none;margin:0;">
     <div>
       <div class="hero-logo-display"><img src="data:image/png;base64,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" alt="ProtractorPro" /></div>
-      <div class="hero-badge"><span></span> Roofing Now in Beta</div>
+      <div class="hero-badge"><span></span> Roofing nearly finished &nbsp;&middot;&nbsp; Solar coming soon</div>
       <h1>Estimate Faster.<br/><em>Win More Jobs.</em></h1>
       <p>ProtractorPro is roofing estimating software for your desktop. Load your plans, trace the roof, and it works out the materials, labor, and wind-zone fastening for shingle, tile, standing seam, single-ply, and tapered insulation &mdash; then checks the bid before it goes out.</p>
       <div class="hero-actions">
@@ -514,8 +517,8 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#9888;&#65039;</div>
-        <h3>Bid Checks</h3>
-        <p>Before a bid goes out, ProtractorPro flags what would cost you: items priced at $0.00, items with no cost code, custom formulas that skip coverage or waste, and metal roof planes left outside the wind zones.</p>
+        <h3>Bid Checks <span class="soon-tag">AI add-on &middot; In development</span></h3>
+        <p>Part of the upcoming AI upgrade: before a bid goes out, ProtractorPro will flag what would cost you &mdash; items priced at $0.00, items with no cost code, custom formulas that skip coverage or waste, and metal roof planes left outside the wind zones.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#128230;</div>
@@ -524,8 +527,8 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#9729;&#65039;</div>
-        <h3>Cloud Bids, Team-Safe</h3>
-        <p>Bids, plans, and takeoffs sync to the cloud so you can work from any machine. Check a bid out to edit it while your team opens it read-only; autosave protects your work, and a crashed session never locks a bid for good.</p>
+        <h3>Cloud Bids, Built Not to Lose Work</h3>
+        <p>Bids, plans, and takeoffs sync to the cloud so you can work from any machine, and your team opens a checked-out bid read-only. Every shape you draw is saved within seconds, checking in confirms the server has all of it, and if two versions of a bid ever disagree you choose which to keep &mdash; nothing is thrown away.</p>
       </div>
     </div>
   </div>
@@ -646,12 +649,16 @@
     <div class="features-header" style="text-align:center;margin-bottom:3rem;">
       <div class="section-tag">In the App</div>
       <div class="section-title">See it in action</div>
-      <div class="section-sub">Real screens from ProtractorPro &mdash; the digitizer, conditions, and job recap.</div>
+      <div class="section-sub">Real screens from ProtractorPro &mdash; the plan digitizer and your bid dashboard.</div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;">
-      <figure class="shot" style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+      <figure class="shot" style="grid-column:1/-1;margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
         <img src="assets/shot-digitizer.png" alt="Plan digitizer with roof takeoff measurements" style="width:100%;display:block;" loading="lazy" onerror="this.closest('.shot').style.display='none';checkShots();" />
-        <figcaption style="padding:0.9rem 1.1rem;font-size:0.85rem;color:var(--muted);">Digitize multi-page plans with snapping, wind zones, and live quantities.</figcaption>
+        <figcaption style="padding:0.9rem 1.1rem;font-size:0.85rem;color:var(--muted);">Trace the roof plan with area, linear, and count tools &mdash; every condition&rsquo;s quantity updates live as you draw.</figcaption>
+      </figure>
+      <figure class="shot" style="grid-column:1/-1;margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <img src="assets/shot-dashboard.png" alt="Dashboard with pipeline value, recent bids, and proposals" style="width:100%;display:block;" loading="lazy" onerror="this.closest('.shot').style.display='none';checkShots();" />
+        <figcaption style="padding:0.9rem 1.1rem;font-size:0.85rem;color:var(--muted);">The dashboard: pipeline value, recent bids, this week&rsquo;s follow-ups, and proposals in one place.</figcaption>
       </figure>
       <figure class="shot" style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
         <img src="assets/shot-conditions.png" alt="Condition editor with material layers and fasteners" style="width:100%;display:block;" loading="lazy" onerror="this.closest('.shot').style.display='none';checkShots();" />
@@ -677,15 +684,13 @@
   <div class="section-inner">
     <div class="trades-header">
       <div class="section-tag">Trade Coverage</div>
-      <div class="section-title">Built for roofing. Expanding fast.</div>
-      <div class="section-sub" style="margin-top:0.5rem;">ProtractorPro launches with a complete roofing estimating workflow. Additional trades are actively in development &mdash; the same precision, applied to your specialty.</div>
+      <div class="section-title">Roofing first. Solar next.</div>
+      <div class="section-sub" style="margin-top:0.5rem;">Roofing is nearly finished &mdash; every major roofing system, from the plan set to a checked bid. Solar estimating is coming next: lay out arrays on a 3D map of the actual roof and price them in the same bid as the roofing. HVAC is planned after that.</div>
     </div>
     <div class="trades-grid">
-      <div class="trade-chip live">&#127968; Roofing <span class="chip-badge">Beta</span></div>
-      <div class="trade-chip soon">&#127912; Painting <span class="chip-badge">Coming Soon</span></div>
-      <div class="trade-chip soon">&#129521; Drywall <span class="chip-badge">Coming Soon</span></div>
-      <div class="trade-chip soon">&#10052;&#65039; HVAC <span class="chip-badge">Coming Soon</span></div>
-      <div class="trade-chip soon">&#129695; Windows &amp; Siding <span class="chip-badge">Coming Soon</span></div>
+      <div class="trade-chip live">&#127968; Roofing <span class="chip-badge">Nearly Finished</span></div>
+      <div class="trade-chip next">&#9728;&#65039; Solar <span class="chip-badge">Coming Soon</span></div>
+      <div class="trade-chip soon">&#10052;&#65039; HVAC <span class="chip-badge">Planned</span></div>
     </div>
     <p style="margin-top:2rem;font-size:0.85rem;color:var(--muted);">
       Want your trade supported sooner? <a href="mailto:hello@protractorpro.com" style="color:var(--blue);text-decoration:none;">Let us know &#8594;</a>
