@@ -50,7 +50,7 @@
     /* HERO */
     .hero {
       min-height: 100vh; display: flex; align-items: center;
-      padding: 120px 5% 80px; position: relative; overflow: hidden;
+      padding: 100px 5% 64px; position: relative; overflow: hidden;
       background: linear-gradient(135deg, #0A1020 0%, #0F1623 40%, #131D30 100%);
     }
     .hero::before {
@@ -81,7 +81,7 @@
 
     .hero-logo-display {
       display: block;
-      margin-bottom: 2.25rem;
+      margin-bottom: 1.5rem;
     }
     .hero-logo-display img {
       height: 110px;
@@ -180,7 +180,7 @@
     .mock-panel-qty { font-size: 0.62rem; color: var(--blue); font-weight: 700; }
 
     /* SECTIONS */
-    section { padding: 100px 5%; }
+    section { padding: 72px 5%; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
     .section-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
     .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
@@ -297,8 +297,7 @@
     <li><a href="#systems">Roof Systems</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#trades">Trades</a></li>
-    <li><a href="#beta">Beta</a></li>
-    <li><a href="#download">Download</a></li>
+        <li><a href="#download">Download</a></li>
     <li><a href="https://portal.protractorpro.com">Customer Login</a></li>
   </ul>
   <a href="/download" class="nav-cta">Try It Now</a>
@@ -314,7 +313,7 @@
       <div class="hero-logo-display"><img src="data:image/png;base64,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" alt="ProtractorPro" /></div>
       <div class="hero-badge"><span></span> Roofing nearly finished &nbsp;&middot;&nbsp; Solar coming soon</div>
       <h1>Estimate Faster.<br/><em>Win More Jobs.</em></h1>
-      <p>ProtractorPro is roofing estimating software for your desktop. Load your plans, trace the roof, and it works out the materials, labor, and wind-zone fastening for shingle, tile, standing seam, single-ply, and tapered insulation &mdash; then checks the bid before it goes out.</p>
+      <p>ProtractorPro is roofing estimating software for your desktop. Load your plans or a satellite photo, trace the roof, and it works out the materials, labor, and fastening for shingle, tile, standing seam, single-ply, and tapered insulation &mdash; then checks the bid before it goes out.</p>
       <div class="hero-actions">
         <a href="/download" class="btn-primary">&#11015; Try It Now &mdash; Free</a>
         <a href="#features" class="btn-secondary">See Features</a>
@@ -329,153 +328,8 @@
           <div class="dot dot-g"></div>
           <span style="font-size:0.68rem;color:var(--muted);margin-left:8px;">Plan Takeoff &mdash; Digitizer</span>
         </div>
-        <div class="mockup-body" style="display:flex;flex-direction:column;min-height:500px;">
-          <!-- Row 1: Show Conditions / Page / Fit -->
-          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;background:#1E2330;border-bottom:1px solid #333B52;font-size:0.6rem;">
-            <span style="background:#252B3B;border:1px solid #333B52;border-radius:4px;padding:3px 9px;color:#E8EAF0;white-space:nowrap;">&#9776;&nbsp; Show Conditions</span>
-            <span style="color:#6B7590;">Page:</span>
-            <span style="background:#0D1117;border:1px solid #333B52;border-radius:4px;padding:3px 22px 3px 9px;color:#E8EAF0;">SHINGLES</span>
-            <span style="flex:1;"></span>
-            <span style="width:24px;height:22px;display:inline-flex;align-items:center;justify-content:center;background:#252B3B;border:1px solid #333B52;border-radius:4px;color:#E8EAF0;">&#8722;</span>
-            <span style="background:#252B3B;border:1px solid #333B52;border-radius:4px;padding:3px 9px;color:#E8EAF0;">&#8689;&nbsp;Fit</span>
-            <span style="width:24px;height:22px;display:inline-flex;align-items:center;justify-content:center;background:#252B3B;border:1px solid #333B52;border-radius:4px;color:#E8EAF0;">&#43;</span>
-          </div>
-          <!-- Row 2: Tools -->
-          <div style="display:flex;align-items:center;gap:3px;padding:5px 10px;background:#252B3B;border-bottom:1px solid #333B52;font-size:0.6rem;overflow:hidden;">
-            <span style="color:#6B7590;font-weight:700;font-size:0.58rem;margin-right:2px;">Tools:</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;">&#9995;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#4A90D9;">&#10148;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#E74C3C;">&#8854;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#1ABC9C;">&#9123;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#4A90D9;">&#8600;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#6B7590;">&#8801;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#6B7590;">&#8635;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#6B7590;">&#8646;</span>
-            <span style="width:23px;height:21px;display:inline-flex;align-items:center;justify-content:center;background:#1A2035;border:1px solid #333B52;border-radius:4px;color:#6B7590;">&#8645;</span>
-            <span style="background:#F39C12;color:#0D1117;border-radius:4px;padding:3px 8px;font-weight:800;white-space:nowrap;margin-left:3px;">&#9585; LF: Continuous</span>
-            <span style="flex:1;"></span>
-            <span style="background:#4A90D9;color:#fff;border-radius:4px;padding:3px 9px;font-weight:700;white-space:nowrap;">&#128247; Bid Images</span>
-            <span style="border:1px solid #F39C12;color:#F39C12;border-radius:4px;padding:3px 8px;font-weight:700;white-space:nowrap;">&#128207; 3/16in = 1ft</span>
-            <span style="color:#6B7590;white-space:nowrap;">Pitch:</span>
-            <span style="background:#1A2035;border:1px solid #333B52;border-radius:4px;padding:3px 8px;color:#E8EAF0;white-space:nowrap;">4/12 &times;1.1 &#9662;</span>
-          </div>
-          <!-- Row 3: Properties -->
-          <div style="display:flex;align-items:center;gap:4px;padding:4px 10px;background:#1E2330;border-bottom:2px solid #333B52;font-size:0.55rem;overflow:hidden;">
-            <span style="color:#6B7590;letter-spacing:0.5px;margin-right:2px;">Properties:</span>
-            <span style="background:#4A90D9;color:#fff;border-radius:3px;padding:2px 7px;font-weight:700;">&#9651; Ortho</span>
-            <span style="background:#4A90D9;color:#fff;border-radius:3px;padding:2px 7px;font-weight:700;">&#129522; Snap</span>
-            <span style="background:#1A2035;color:#6B7590;border:1px solid #333B52;border-radius:3px;padding:2px 7px;">Midpoints</span>
-            <span style="background:#4A90D9;color:#fff;border-radius:3px;padding:2px 7px;font-weight:700;">HUD</span>
-            <span style="background:#1A2035;color:#6B7590;border:1px solid #333B52;border-radius:3px;padding:2px 7px;">Grid</span>
-            <span style="background:#1A2035;color:#6B7590;border:1px solid #333B52;border-radius:3px;padding:2px 7px;">X-Ray</span>
-            <span style="background:#4A90D9;color:#fff;border-radius:3px;padding:2px 7px;font-weight:700;">Dims</span>
-            <span style="width:1px;height:14px;background:#333B52;margin:0 3px;"></span>
-            <span style="color:#6B7590;">&#8630;</span><span style="color:#6B7590;">&#8631;</span>
-            <span style="width:1px;height:14px;background:#333B52;margin:0 3px;"></span>
-            <span style="background:#1A2035;color:#6B7590;border:1px solid #333B52;border-radius:3px;padding:2px 7px;">Zones</span>
-            <span style="background:#4A90D9;color:#fff;border-radius:3px;padding:2px 7px;font-weight:700;">Show Zones</span>
-            <span style="background:#1A2035;color:#6B7590;border:1px solid #333B52;border-radius:3px;padding:2px 7px;">Isolate</span>
-          </div>
-          <!-- Canvas + sidebar -->
-          <div style="display:flex;flex:1;min-height:0;">
-            <div style="flex:1;background:#0D1117;position:relative;overflow:hidden;padding:10px;">
-              <div style="background:#fff;border-radius:2px;width:100%;height:100%;min-height:330px;position:relative;overflow:hidden;">
-                <img src="assets/roof-plan.jpg" alt="Roof plan takeoff"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;display:none;"
-                  onload="this.style.display='block';this.nextElementSibling.style.display='none';"
-                  onerror="this.style.display='none';" />
-                <svg viewBox="0 0 460 335" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id="fieldhatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-                      <line x1="0" y1="0" x2="0" y2="7" stroke="#E74C3C" stroke-width="0.6" opacity="0.45"/>
-                    </pattern>
-                    <pattern id="benthatch" width="5" height="5" patternUnits="userSpaceOnUse">
-                      <line x1="2.5" y1="0" x2="2.5" y2="5" stroke="#E67E22" stroke-width="0.8" opacity="0.7"/>
-                    </pattern>
-                  </defs>
-                  <g transform="translate(75,0)">
-                    <!-- roof outline: L-shape, left wing runs down -->
-                    <polygon points="30,25 280,25 280,212 136,212 136,296 30,296"
-                      fill="url(#fieldhatch)" stroke="#E74C3C" stroke-width="2" stroke-linejoin="round"/>
-                    <polygon points="30,25 280,25 280,212 136,212 136,296 30,296"
-                      fill="rgba(231,76,60,0.05)"/>
-                    <!-- hips (green) -->
-                    <line x1="30"  y1="25"  x2="123" y2="118" stroke="#27AE60" stroke-width="1.8"/>
-                    <line x1="280" y1="25"  x2="187" y2="118" stroke="#27AE60" stroke-width="1.8"/>
-                    <line x1="280" y1="212" x2="187" y2="118" stroke="#27AE60" stroke-width="1.8"/>
-                    <line x1="30"  y1="296" x2="83"  y2="243" stroke="#27AE60" stroke-width="1.8"/>
-                    <line x1="136" y1="296" x2="83"  y2="243" stroke="#27AE60" stroke-width="1.8"/>
-                    <!-- ridges (blue) -->
-                    <line x1="123" y1="118" x2="187" y2="118" stroke="#2E86DE" stroke-width="2"/>
-                    <line x1="83"  y1="243" x2="83"  y2="165" stroke="#2E86DE" stroke-width="2"/>
-                    <line x1="83"  y1="165" x2="123" y2="118" stroke="#2E86DE" stroke-width="2"/>
-                    <!-- valley (purple) -->
-                    <line x1="136" y1="212" x2="83" y2="165" stroke="#8E44AD" stroke-width="1.8"/>
-                    <!-- entry porch: small hip roof projecting from the eave -->
-                    <rect x="162" y="212" width="42" height="32" fill="url(#benthatch)" stroke="#E67E22" stroke-width="1.5"/>
-                    <line x1="162" y1="244" x2="183" y2="226" stroke="#27AE60" stroke-width="1.4"/>
-                    <line x1="204" y1="244" x2="183" y2="226" stroke="#27AE60" stroke-width="1.4"/>
-                    <line x1="183" y1="226" x2="183" y2="212" stroke="#2E86DE" stroke-width="1.4"/>
-                    <!-- snap indicator at top-right corner -->
-                    <circle cx="280" cy="25" r="7" fill="none" stroke="#2ECC71" stroke-width="2"/>
-                    <circle cx="280" cy="25" r="2.5" fill="#2ECC71"/>
-                    <!-- dimensions (red) -->
-                    <text x="141" y="16"  fill="#E74C3C" font-size="10" font-family="Inter,sans-serif">57.2'</text>
-                    <text x="287" y="122" fill="#E74C3C" font-size="10" font-family="Inter,sans-serif">44.4'</text>
-                    <text x="1"   y="165" fill="#E74C3C" font-size="10" font-family="Inter,sans-serif">58.3'</text>
-                    <text x="66"  y="310" fill="#E74C3C" font-size="10" font-family="Inter,sans-serif">23.5'</text>
-                    <text x="230" y="226" fill="#E74C3C" font-size="9"  font-family="Inter,sans-serif">10.0'</text>
-                    <text x="143" y="240" fill="#E74C3C" font-size="8"  font-family="Inter,sans-serif">8.7'</text>
-                    <text x="208" y="240" fill="#E74C3C" font-size="8"  font-family="Inter,sans-serif">7.7'</text>
-                    <!-- sheet label -->
-                    <text x="180" y="290" fill="#4B5563" font-size="11" font-weight="700" font-family="Inter,sans-serif">ROOF PLAN</text>
-                    <text x="180" y="302" fill="#9CA3AF" font-size="7" font-family="Inter,sans-serif">3/16" = 1'-0"</text>
-                  </g>
-                </svg>
-                <!-- HUD -->
-                <div style="position:absolute;top:10px;right:10px;background:#1A2035;border:1px solid #333B52;border-radius:5px;padding:7px 10px;font-family:Consolas,Menlo,monospace;font-size:0.55rem;line-height:1.7;color:#E8EAF0;">
-                  <div>Tool: &#9675; Area</div>
-                  <div>Pos:&nbsp; -5' 5", 23' 6"</div>
-                  <div style="color:#4A90D9;">ORTHO | SNAP</div>
-                </div>
-              </div>
-            </div>
-            <!-- Sidebar -->
-            <div style="width:190px;border-left:1px solid #333B52;background:#1A2035;padding:10px;display:flex;flex-direction:column;gap:5px;font-size:0.6rem;">
-              <div style="font-size:0.55rem;letter-spacing:1px;font-weight:700;color:#6B7590;">CONDITIONS</div>
-              <div style="display:flex;align-items:center;gap:6px;background:#252B3B;border:1px solid #2ECC71;border-radius:5px;padding:4px 7px;">
-                <span style="color:#2ECC71;">&#9211;</span><span style="color:#2ECC71;flex:1;">&#9656; Field:</span><span style="color:#2ECC71;">2,958.74 sq ft</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:6px;background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;">
-                <span style="color:#6B7590;">&#9211;</span><span style="color:#6B7590;font-style:italic;flex:1;">Cricket:</span><span style="color:#6B7590;font-style:italic;">0.00 sq ft</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:6px;background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;">
-                <span style="color:#2ECC71;">&#9211;</span><span style="color:#E8EAF0;flex:1;">Hips:</span><span style="color:#2ECC71;">152.93 LF</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:6px;background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;">
-                <span style="color:#2ECC71;">&#9211;</span><span style="color:#E8EAF0;flex:1;">Ridge:</span><span style="color:#2ECC71;">40.79 LF</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:6px;background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;">
-                <span style="color:#2ECC71;">&#9211;</span><span style="color:#E8EAF0;flex:1;">Valley:</span><span style="color:#2ECC71;">35.88 LF</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:6px;background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;">
-                <span style="color:#2ECC71;">&#9211;</span><span style="color:#E8EAF0;flex:1;">Eave:</span><span style="color:#2ECC71;">248.17 LF</span>
-              </div>
-              <div style="font-size:0.55rem;letter-spacing:1px;font-weight:700;color:#6B7590;margin-top:6px;">MEASUREMENTS</div>
-              <div style="background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;color:#2ECC71;">[Field]&nbsp; 2,958.74 sq ft <span style="color:#6B7590;">(3 areas)</span></div>
-              <div style="background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;color:#F39C12;">[Eave]&nbsp; 248.17 ln ft <span style="color:#6B7590;">(3 areas)</span></div>
-              <div style="margin-top:auto;font-size:0.58rem;line-height:1.9;">
-                <div style="color:#4A90D9;">Area: <span style="color:#E8EAF0;float:right;">2958.74 sq ft</span></div>
-                <div style="color:#4A90D9;">Linear: <span style="color:#E8EAF0;float:right;">489.35 ln ft</span></div>
-                <div style="color:#F39C12;">Count: <span style="color:#E8EAF0;float:right;">6 items</span></div>
-              </div>
-              <div style="background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;text-align:center;color:#E8EAF0;">&#128465; Delete Selected</div>
-              <div style="background:#252B3B;border:1px solid #333B52;border-radius:5px;padding:4px 7px;text-align:center;color:#E8EAF0;">&#10024; Clear All</div>
-            </div>
-          </div>
-          <!-- Status bar -->
-          <div style="padding:3px 10px;background:#1E2330;border-top:1px solid #333B52;font-size:0.55rem;color:#6B7590;">Plan loaded from database.</div>
-        </div>
+        <img src="assets/hero-digitizer.jpg" alt="ProtractorPro digitizer: a metal roof plan traced into conditions with live quantities"
+             style="display:block;width:100%;height:auto;" width="1600" height="941" />
       </div>
     </div>
   </div>
@@ -493,7 +347,7 @@
       <div class="feature-card">
         <div class="feature-icon">&#128208;</div>
         <h3>Plan Digitizer</h3>
-        <p>Load multi-page PDF plans and trace with area, linear, count, and corner tools. Snap to corners and edge midpoints, set scale and pitch per page, duplicate a page&rsquo;s setup, and copy drawings from one page to another.</p>
+        <p>Load multi-page PDF plans or satellite photos and trace with area, linear, count, and corner tools. Snap to corners and edge midpoints, set scale and pitch per page, duplicate a page&rsquo;s setup, and copy drawings from one page to another.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#128194;</div>
@@ -570,7 +424,7 @@
         <ul>
           <li>Set a slope direction on each plane and get a labeled panel cut list, rounded to your cut increment</li>
           <li>A seam factor per panel profile turns roof area into the coil you actually order</li>
-          <li>Clips counted seam by seam, tighter in the wind-zone perimeter and corners</li>
+          <li>Clips counted seam by seam from your clip spacing</li>
           <li>Export the cut list to Excel for the shop</li>
         </ul>
       </div>
@@ -603,15 +457,12 @@
         </ul>
       </div>
       <div class="system-card wide">
-        <div class="sys-kicker">ASCE 7-16 &amp; 7-22</div>
-        <h3>Wind Zones, Counted Into the Bid</h3>
+        <div class="sys-kicker">Planned &middot; ASCE 7-16 &amp; 7-22</div>
+        <h3>Wind Zones <span class="soon-tag">In development</span></h3>
         <ul>
-          <li>Low-slope perimeter and L-shaped corner zones sized from the building height</li>
+          <li>Low-slope perimeter and corner zones sized from the building height, drawn right on the plan</li>
           <li>Steep-slope hip and gable layouts from the hips and ridges you draw</li>
-          <li>Outline each roof level with its own height &mdash; zones are drawn right on the plan</li>
-          <li>Enhanced fastening and clip counts go into the price, not a guess</li>
-          <li>Mark interior walls and skip corners that don&rsquo;t apply</li>
-          <li>Any metal plane left outside the zones is flagged before the bid goes out</li>
+          <li>Enhanced fastening and clip counts priced into the bid</li>
         </ul>
       </div>
     </div>
@@ -627,8 +478,8 @@
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Upload Your Plans</h3>
-        <p>Import PDF plans into the bid's plan library, set scale and pitch factor per page, and you're ready to measure. Multi-page plans are fully supported.</p>
+        <h3>Upload Plans or Photos</h3>
+        <p>Import PDF plan sets or satellite photos into the bid's image library, set the scale and pitch per page, and you're ready to measure. Multi-page plans are fully supported.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -638,24 +489,20 @@
       <div class="step">
         <div class="step-num">3</div>
         <h3>Generate Your Estimate</h3>
-        <p>Materials, labor, and wind-zone fastening fill in from your conditions. Clear any flags, apply markup in the job recap, and send a bid you know is right.</p>
+        <p>Materials, labor, and fasteners fill in from your conditions. Clear any flags, apply markup in the job recap, and send a bid you know is right.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="screenshots" style="padding:6rem 5%;background:var(--navy2);border-top:1px solid var(--border);">
+<section id="screenshots" style="padding:72px 5%;background:var(--navy2);border-top:1px solid var(--border);">
   <div class="section-inner">
     <div class="features-header" style="text-align:center;margin-bottom:3rem;">
       <div class="section-tag">In the App</div>
       <div class="section-title">See it in action</div>
-      <div class="section-sub">Real screens from ProtractorPro &mdash; the plan digitizer and your bid dashboard.</div>
+      <div class="section-sub">Every bid, draft, and proposal on one dashboard &mdash; pick up right where you left off.</div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;">
-      <figure class="shot" style="grid-column:1/-1;margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
-        <img src="assets/shot-digitizer.png" alt="Plan digitizer with roof takeoff measurements" style="width:100%;display:block;" loading="lazy" onerror="this.closest('.shot').style.display='none';checkShots();" />
-        <figcaption style="padding:0.9rem 1.1rem;font-size:0.85rem;color:var(--muted);">Trace the roof plan with area, linear, and count tools &mdash; every condition&rsquo;s quantity updates live as you draw.</figcaption>
-      </figure>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto;">
       <figure class="shot" style="grid-column:1/-1;margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
         <img src="assets/shot-dashboard.png" alt="Dashboard with pipeline value, recent bids, and proposals" style="width:100%;display:block;" loading="lazy" onerror="this.closest('.shot').style.display='none';checkShots();" />
         <figcaption style="padding:0.9rem 1.1rem;font-size:0.85rem;color:var(--muted);">The dashboard: pipeline value, recent bids, this week&rsquo;s follow-ups, and proposals in one place.</figcaption>
@@ -721,39 +568,11 @@
                 margin-left: auto; margin-right: auto; }
   .price-fine a { color: var(--blue); text-decoration: none; }
 </style>
-<section class="pricing" id="beta">
-  <div class="section-inner">
-    <div class="section-tag">Beta</div>
-    <div class="section-title">Roofing is in beta &mdash; and free while it is.</div>
-    <div class="section-sub" style="margin-left:auto;margin-right:auto;">The whole app, every roofing system, unlimited bids.
-      No credit card and no billing during the beta. Pricing will be announced before billing starts.</div>
-    <div class="price-grid">
-      <div class="price-card best">
-        <div class="price-badge">FREE IN BETA</div>
-        <div class="price-plan">Beta Testers Get</div>
-        <ul style="margin-top:1rem;">
-          <li>The full estimating and digitizer suite</li>
-          <li>Standing seam, single-ply, tapered insulation, shingle, and tile</li>
-          <li>ASCE 7 wind zones counted into the bid</li>
-          <li>Cloud-synced bids on any machine</li>
-          <li>Updates that install themselves as new features ship</li>
-          <li>A direct line to the developer &mdash; tell us what your bids need</li>
-        </ul>
-        <a class="price-cta" href="/download">Download the Beta</a>
-      </div>
-    </div>
-    <p class="price-fine">
-      Found a bug or missing a roofing system you bid every week?
-      <a href="mailto:hello@protractorpro.com">Email us</a> &mdash; beta feedback goes straight into the build.
-    </p>
-  </div>
-</section>
-
-<section class="download-cta" id="download">
+<section class="download-cta" id="download"><span id="beta"></span>
   <div class="cta-inner">
     <div class="section-tag">Download</div>
-    <div class="section-title">Try ProtractorPro today</div>
-    <div class="section-sub">Download the beta &mdash; it&rsquo;s free while roofing is in beta, and every download gets the newest release. Leave your email and we&rsquo;ll keep you posted as new features ship.</div>
+    <div class="section-title">Roofing is in beta &mdash; and free while it is</div>
+    <div class="section-sub">The whole app, every roofing system, unlimited bids &mdash; no credit card and no billing during the beta. Updates install themselves, and beta feedback goes straight into the build. Pricing will be announced before billing starts.</div>
     <p style="margin-top:2rem;">
       <a href="/download" class="btn-primary">&#11015; Download for Windows</a>
     </p>
@@ -812,7 +631,6 @@ function handleSignup(e) {
     <div class="footer-links">
       <a href="#features">Features</a>
       <a href="#trades">Trades</a>
-      <a href="#beta">Beta</a>
       <a href="#download">Download</a>
       <a href="https://portal.protractorpro.com">Customer Login</a>
       <a href="mailto:hello@protractorpro.com">Contact</a>
