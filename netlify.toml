@@ -3,5 +3,5 @@
 
 [[redirects]]
   from = "/download"
-  to = "https://github.com/thanontos/protractorpro-releases/releases/latest/download/ProtractorProSetup.exe"
+  to = "/#download"
   status = 302
